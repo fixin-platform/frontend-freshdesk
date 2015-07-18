@@ -1,0 +1,22 @@
+template(name="AddFreshdeskAvatar")
+  form.col-lg-6.col-xs-12.self-validation
+    .form-group
+      label.control-label(for="{{_id}}-domain") {{{_i18n.addFreshdeskTemplate.domain.label}}}
+      input.form-control(id="{{_id}}-domain" name="domain" placeholder="{{{_i18n.addFreshdeskTemplate.domain.placeholder}}}")
+      p.help-block {{{_i18n.addFreshdeskTemplate.domain.help}}}
+    .form-group
+      label.control-label(for="{{_id}}-username") {{{_i18n.addFreshdeskTemplate.username.label}}}
+      input.form-control(id="{{_id}}-username" name="username" placeholder="{{{_i18n.addFreshdeskTemplate.username.placeholder}}}")
+      p.help-block {{{_i18n.addFreshdeskTemplate.username.help}}}
+    .form-group
+      label.control-label(for="{{_id}}-password") {{{_i18n.addFreshdeskTemplate.password.label}}}
+      input.form-control(id="{{_id}}-password" name="password" placeholder="{{{_i18n.addFreshdeskTemplate.password.placeholder}}}" type="password")
+      p.help-block {{{_i18n.addFreshdeskTemplate.password.help}}}
+    button.btn.btn-success(type="submit")
+      .ready.fa.fa-fw.fa-check
+      .loading.fa.fa-fw.fa-spin.fa-spinner(style="display: none;")
+      | {{{_i18n.addFreshdeskTemplate.submit}}}
+    if options.count
+      | &nbsp;or&nbsp;
+      a.btn-link.cancel-add(href="#")
+        | {{{_i18n.addFreshdeskTemplate.cancel}}}
