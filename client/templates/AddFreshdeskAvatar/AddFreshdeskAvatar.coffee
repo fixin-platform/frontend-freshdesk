@@ -18,11 +18,11 @@ Template.AddFreshdeskAvatar.onRendered ->
       username:
         validators:
           notEmpty:
-            message: "Please enter your #{step.api} API key"
+            message: "Please enter your #{step.api} Username"
       password:
         validators:
           notEmpty:
-            message: "Please enter your #{step.api} API secret"
+            message: "Please enter your #{step.api} Password"
   .on "success.form.fv", grab encapsulate (event) ->
     $button = $(event.currentTarget)
     $button.find(".ready").hide()
