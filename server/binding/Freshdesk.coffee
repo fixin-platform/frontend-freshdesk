@@ -1,7 +1,7 @@
 class Bindings.Freshdesk extends Bindings.Basic
   request: (options) ->
     _.defaults(options,
-      baseUrl: "https://#{@credential.details.domain}.freshdesk.com"
+      baseUrl: "https://#{@credential.details.domain}"
       json: true
     )
     super(options)
